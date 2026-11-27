@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: ethyca-privacy-api
+    runtime: node
+    plan: free
+    buildCommand: npm ci
+    startCommand: npm start
+    healthCheckPath: /policies
+    envVars:
+      - key: NODE_VERSION
+        value: 22.9.0
