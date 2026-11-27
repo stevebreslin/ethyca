@@ -1,8 +1,14 @@
 import type { Policy, PrivacyRequest, RequestStatus } from "./types";
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL ?? "http://localhost:3001";
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL ?? (
+  import.meta.env.DEV ? "http://localhost:3001" : ""
+);
 
 async function request<T>(path: string, init?: RequestInit): Promise<T> {
+  if (!API_BASE_URL) {
+    throw new Error("The API URL is not configured for this deployment.");
+  }
+
   let response: Response;
   try {
     response = await fetch(`${API_BASE_URL}${path}`, {

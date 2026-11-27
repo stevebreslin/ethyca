@@ -9,8 +9,9 @@ An active deletion request (`pending` or `in_progress`) for the same normalized 
 ## Trade-offs
 
 - Used Vite rather than Create React App for a current, lightweight React + TypeScript setup.
-- Used JSON Server as the persistence layer to keep the project focused on the UI. The UI handles network/API errors, but does not add authentication, audit trails, server-side validation, or concurrency protection.
+- Used JSON Server as the persistence layer to keep the project focused on the UI. The hosted demo API is public and unauthenticated, with read/write access; use synthetic data only. The Render free service can sleep and has ephemeral storage, so changes reset when the service restarts.
 - Pagination is client-side because the mock API loads the full request collection; server-side pagination would scale better for a larger dataset.
+- GitHub Pages hosts the static frontend while Render hosts the API. The Pages workflow requires the `VITE_API_BASE_URL` repository Actions variable.
 - Used a compact single-page queue/detail layout and custom dark styling over Bootstrap primitives rather than introducing a larger component framework.
 - New requests use the matching policy if one exists; the dashboard still accepts missing or unknown policy references in existing data and presents unavailable policy details explicitly.
 - Error notifications remain until dismissed; success and warning notifications auto-dismiss.
@@ -19,7 +20,7 @@ An active deletion request (`pending` or `in_progress`) for the same normalized 
 
 I used GitHub Copilot in VS Code to inspect the requirements and seed-data edge cases, implement a responsive React/TypeScript dashboard, enforce the deletion/access approval rule, and add tests and documentation. The prompts focused on those requirements, including graceful handling of missing data and API errors.
 
-It worked well for scaffolding the app, implementing the main review workflow, and creating focused tests. The initial implementation needed corrections: the first test run exposed missing test cleanup between renders, and the first build exposed missing Vite client types for `import.meta.env`. I fixed both, then continued iterating on the UI based on manual browser checks and user feedback. The final implementation was verified with 12 passing unit/UI tests, a successful production build, and browser checks of the responsive layout, filters, and pagination.
+It worked well for scaffolding the app, implementing the main review workflow, and creating focused tests. The initial implementation needed corrections: the first test run exposed missing test cleanup between renders, and the first build exposed missing Vite client types for `import.meta.env`. I fixed both, then continued iterating on the UI based on manual browser checks and user feedback. The implementation is verified with 13 passing unit/UI tests, a successful production build, and browser checks of the responsive layout, filters, and pagination.
 
 ## What I would do next
 

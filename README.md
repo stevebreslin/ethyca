@@ -107,3 +107,16 @@ Run the unit and UI tests with `npm test`, or create a production build with `np
 The app expects the mock API on port 3001 by default; set `VITE_API_BASE_URL` to use another API URL.
 
 See [SUBMISSION.md](./SUBMISSION.md) for implementation choices, trade-offs, AI tool usage, and next steps.
+
+## Publishing a demo
+
+The GitHub Pages workflow builds the frontend when changes are pushed to `main`. GitHub Pages serves static files only, so the JSON Server API must be hosted separately. The included [`render.yaml`](./render.yaml) configures a Render web service for that API.
+
+1. Push the deployment files to GitHub. Create the Render service from the repository's `render.yaml` Blueprint and copy its `onrender.com` service URL.
+2. In the GitHub repository, open **Settings → Secrets and variables → Actions → Variables** and add `VITE_API_BASE_URL` with the Render service URL (for example, `https://ethyca-privacy-api.onrender.com`).
+3. Open **Settings → Pages** and set the source to **GitHub Actions**.
+4. Merge or push the deployment changes to `main`. The **Deploy to GitHub Pages** workflow builds and publishes the app.
+
+For this repository, the Pages URL is `https://stevebreslin.github.io/ethyca/`.
+
+The hosted JSON Server is a public, unauthenticated demo API with read/write access. Use only synthetic data. The Render free service can sleep while idle, and its filesystem is ephemeral; the seed data is regenerated when the service restarts, so API changes are not durable across restarts. Do not use this setup for real personal data or production.
