@@ -1,0 +1,534 @@
+{
+  "policies": [
+    {
+      "id": "pol-001",
+      "name": "Default Access Policy",
+      "request_type": "access",
+      "deadline_days": 30
+    },
+    {
+      "id": "pol-002",
+      "name": "Right to Erasure Policy",
+      "request_type": "deletion",
+      "deadline_days": 45
+    },
+    {
+      "id": "pol-003",
+      "name": "Data Portability Policy",
+      "request_type": "portability",
+      "deadline_days": 30
+    }
+  ],
+  "privacy_requests": [
+    {
+      "id": "req-001",
+      "name": "Alice Martin",
+      "email": "alice.martin@example.com",
+      "request_type": "access",
+      "status": "pending",
+      "submitted_at": "2026-11-01T09:15:00.000Z",
+      "assigned_to": "sarah@company.com",
+      "policy_id": "pol-001"
+    },
+    {
+      "id": "req-003",
+      "name": "Carmen Silva",
+      "email": "carmen.silva@example.com",
+      "request_type": "portability",
+      "status": "in_progress",
+      "submitted_at": "2026-11-05T14:00:00.000Z",
+      "assigned_to": "sarah@company.com",
+      "policy_id": "pol-003"
+    },
+    {
+      "id": "req-005",
+      "name": "Elena Petrov",
+      "email": "elena.petrov@example.com",
+      "request_type": "deletion",
+      "status": "pending",
+      "submitted_at": "2026-11-18T16:55:00.000Z",
+      "assigned_to": "priya@company.com",
+      "policy_id": "pol-002"
+    },
+    {
+      "id": "req-006",
+      "name": "Frank Nguyen",
+      "email": "frank.n@example.com",
+      "request_type": "access",
+      "status": "in_progress",
+      "submitted_at": "2026-11-10T10:20:00.000Z",
+      "assigned_to": "priya@company.com",
+      "policy_id": "pol-001"
+    },
+    {
+      "id": "req-007",
+      "name": "Grace Unassigned",
+      "email": "grace.u@example.com",
+      "request_type": "deletion",
+      "status": "pending",
+      "submitted_at": "2026-11-22T07:45:00.000Z",
+      "assigned_to": null,
+      "policy_id": null
+    },
+    {
+      "id": "req-009",
+      "name": "Jonas Weber",
+      "email": "j.weber@example.com",
+      "request_type": "access",
+      "status": "pending",
+      "submitted_at": "2026-11-20T12:00:00.000Z",
+      "assigned_to": "sarah@company.com",
+      "policy_id": "pol-001"
+    },
+    {
+      "id": "req-010",
+      "name": "Jonas Weber",
+      "email": "j.weber@example.com",
+      "request_type": "deletion",
+      "status": "in_progress",
+      "submitted_at": "2026-11-08T09:00:00.000Z",
+      "assigned_to": "priya@company.com",
+      "policy_id": "pol-002"
+    },
+    {
+      "id": "req-013",
+      "name": "Maya Patel",
+      "email": "m.patel@example.com",
+      "request_type": "portability",
+      "status": "pending",
+      "submitted_at": "2026-11-15T09:45:00.000Z",
+      "assigned_to": "priya@company.com",
+      "policy_id": "pol-003"
+    },
+    {
+      "id": "req-023",
+      "name": "Will Chen",
+      "email": "w.chen@example.com",
+      "request_type": "access",
+      "status": "pending",
+      "submitted_at": "2026-11-19T15:30:00.000Z",
+      "assigned_to": "sarah@company.com",
+      "policy_id": "pol-004"
+    },
+    {
+      "id": "req-024",
+      "name": "Xiu Huang",
+      "email": "x.huang@example.com",
+      "request_type": "portability",
+      "status": "in_progress",
+      "submitted_at": "2026-11-12T11:00:00.000Z",
+      "assigned_to": "priya@company.com",
+      "policy_id": "pol-003"
+    },
+    {
+      "id": "req-028",
+      "name": "Bella Turner",
+      "email": "b.turner@example.com",
+      "request_type": "portability",
+      "status": "pending",
+      "submitted_at": "2026-11-22T08:00:00.000Z",
+      "assigned_to": "james@company.com",
+      "policy_id": "pol-003"
+    },
+    {
+      "id": "req-031",
+      "name": "Oscar Flynn",
+      "email": "o.flynn@example.com",
+      "request_type": "access",
+      "status": "pending",
+      "submitted_at": "2026-11-25T10:00:00.000Z",
+      "assigned_to": "james@company.com",
+      "policy_id": "pol-001"
+    },
+    {
+      "id": "req-033",
+      "name": "George Watts",
+      "email": "g.watts@example.com",
+      "request_type": "deletion",
+      "status": "in_progress",
+      "submitted_at": "2026-11-14T08:30:00.000Z",
+      "assigned_to": "priya@company.com",
+      "policy_id": "pol-002"
+    },
+    {
+      "id": "req-036",
+      "name": "Julia Santos",
+      "email": "j.santos@example.com",
+      "request_type": "portability",
+      "status": "in_progress",
+      "submitted_at": "2026-11-17T14:00:00.000Z",
+      "assigned_to": "priya@company.com",
+      "policy_id": "pol-003"
+    },
+    {
+      "id": "req-041",
+      "name": "Oscar Flynn",
+      "email": "o.flynn@example.com",
+      "request_type": "deletion",
+      "status": "pending",
+      "submitted_at": "2026-11-20T09:15:00.000Z",
+      "assigned_to": "sarah@company.com",
+      "policy_id": "pol-002"
+    },
+    {
+      "id": "req-042",
+      "name": "Petra Novak",
+      "email": "p.novak@example.com",
+      "request_type": "access",
+      "status": "in_progress",
+      "submitted_at": "2026-11-11T14:30:00.000Z",
+      "assigned_to": "priya@company.com",
+      "policy_id": "pol-001"
+    },
+    {
+      "id": "req-045",
+      "name": "George Watts",
+      "email": "g.watts@example.com",
+      "request_type": "access",
+      "status": "pending",
+      "submitted_at": "2026-11-23T11:45:00.000Z",
+      "assigned_to": "priya@company.com",
+      "policy_id": "pol-001"
+    },
+    {
+      "id": "req-047",
+      "name": "Vincent Laforge",
+      "email": "v.laforge@example.com",
+      "request_type": "portability",
+      "status": "pending",
+      "submitted_at": "2026-11-16T13:00:00.000Z",
+      "assigned_to": "sarah@company.com",
+      "policy_id": "pol-003"
+    },
+    {
+      "id": "req-050",
+      "name": "Yuki Tanabe",
+      "email": "y.tanabe@example.com",
+      "request_type": "portability",
+      "status": "pending",
+      "submitted_at": "2026-11-24T08:45:00.000Z",
+      "assigned_to": "sarah@company.com",
+      "policy_id": "pol-003"
+    },
+    {
+      "id": "req-016",
+      "name": "Priya Sharma",
+      "email": "priya.s@example.com",
+      "request_type": "access",
+      "status": "pending",
+      "submitted_at": "2026-09-22T13:00:00.000Z",
+      "assigned_to": null,
+      "policy_id": "pol-001"
+    },
+    {
+      "id": "req-020",
+      "name": "Tanya Brooks",
+      "email": "t.brooks@example.com",
+      "request_type": "portability",
+      "status": "pending",
+      "submitted_at": "2026-10-27T14:00:00.000Z",
+      "assigned_to": "james@company.com",
+      "policy_id": "pol-003"
+    },
+    {
+      "id": "req-025",
+      "name": "Yasmin Malik",
+      "email": "y.malik@example.com",
+      "request_type": "deletion",
+      "status": "pending",
+      "submitted_at": "2026-10-04T09:30:00.000Z",
+      "assigned_to": "james@company.com",
+      "policy_id": "pol-002"
+    },
+    {
+      "id": "req-029",
+      "name": "Carlos Rivera",
+      "email": "c.rivera@example.com",
+      "request_type": "access",
+      "status": "in_progress",
+      "submitted_at": "2026-10-21T14:45:00.000Z",
+      "assigned_to": "sarah@company.com",
+      "policy_id": "pol-001"
+    },
+    {
+      "id": "req-035",
+      "name": "Ivan Sokolov",
+      "email": "i.sokolov@example.com",
+      "request_type": "deletion",
+      "status": "pending",
+      "submitted_at": "2026-09-20T09:45:00.000Z",
+      "assigned_to": "sarah@company.com",
+      "policy_id": "pol-002"
+    },
+    {
+      "id": "req-039",
+      "name": "Marco Rossi",
+      "email": "m.rossi@example.com",
+      "request_type": "access",
+      "status": "pending",
+      "submitted_at": "2026-10-13T08:00:00.000Z",
+      "assigned_to": "priya@company.com",
+      "policy_id": "pol-001"
+    },
+    {
+      "id": "req-014",
+      "name": "Nadia Kowalski",
+      "email": "n.kowalski@example.com",
+      "request_type": "access",
+      "status": "in_progress",
+      "submitted_at": "2026-09-30T10:00:00.000Z",
+      "assigned_to": "james@company.com",
+      "policy_id": "pol-001"
+    },
+    {
+      "id": "req-018",
+      "name": "Rosa Fernandez",
+      "email": "r.fernandez@example.com",
+      "request_type": "deletion",
+      "status": "in_progress",
+      "submitted_at": "2026-09-27T11:30:00.000Z",
+      "assigned_to": "priya@company.com",
+      "policy_id": "pol-002"
+    },
+    {
+      "id": "req-046",
+      "name": "Uma Krishnan",
+      "email": "u.krishnan@example.com",
+      "request_type": "deletion",
+      "status": "in_progress",
+      "submitted_at": "2026-09-14T09:00:00.000Z",
+      "assigned_to": "james@company.com",
+      "policy_id": "pol-002"
+    },
+    {
+      "id": "req-002",
+      "name": "Brian Okafor",
+      "email": "b.okafor@example.com",
+      "request_type": "deletion",
+      "status": "approved",
+      "submitted_at": "2026-10-23T11:42:00.000Z",
+      "assigned_to": "james@company.com",
+      "policy_id": "pol-002"
+    },
+    {
+      "id": "req-004",
+      "name": "David Kim",
+      "email": "d.kim@example.com",
+      "request_type": "access",
+      "status": "denied",
+      "submitted_at": "2026-10-18T08:30:00.000Z",
+      "assigned_to": "james@company.com",
+      "policy_id": "pol-001"
+    },
+    {
+      "id": "req-008",
+      "name": "Henry Walsh",
+      "email": "h.walsh@example.com",
+      "request_type": "portability",
+      "status": "approved",
+      "submitted_at": "2026-10-31T13:10:00.000Z",
+      "assigned_to": "james@company.com",
+      "policy_id": "pol-003"
+    },
+    {
+      "id": "req-011",
+      "name": "Keiko Tanaka",
+      "email": "k.tanaka@example.com",
+      "request_type": "access",
+      "status": "approved",
+      "submitted_at": "2026-09-17T11:00:00.000Z",
+      "assigned_to": "james@company.com",
+      "policy_id": "pol-001"
+    },
+    {
+      "id": "req-012",
+      "name": "Liam O'Brien",
+      "email": "l.obrien@example.com",
+      "request_type": "deletion",
+      "status": "denied",
+      "submitted_at": "2026-10-06T14:30:00.000Z",
+      "assigned_to": "sarah@company.com",
+      "policy_id": "pol-002"
+    },
+    {
+      "id": "req-015",
+      "name": "Omar Hassan",
+      "email": "o.hassan@example.com",
+      "request_type": "deletion",
+      "status": "approved",
+      "submitted_at": "2026-09-12T08:15:00.000Z",
+      "assigned_to": "sarah@company.com",
+      "policy_id": "pol-002"
+    },
+    {
+      "id": "req-017",
+      "name": "Quentin Dubois",
+      "email": "q.dubois@example.com",
+      "request_type": "portability",
+      "status": "denied",
+      "submitted_at": "2026-10-17T16:20:00.000Z",
+      "assigned_to": "james@company.com",
+      "policy_id": "pol-003"
+    },
+    {
+      "id": "req-019",
+      "name": "Samuel Lee",
+      "email": "s.lee@example.com",
+      "request_type": "access",
+      "status": "approved",
+      "submitted_at": "2026-10-11T09:00:00.000Z",
+      "assigned_to": "sarah@company.com",
+      "policy_id": "pol-001"
+    },
+    {
+      "id": "req-021",
+      "name": "Umar Diallo",
+      "email": "u.diallo@example.com",
+      "request_type": "access",
+      "status": "denied",
+      "submitted_at": "2026-10-15T10:45:00.000Z",
+      "assigned_to": "priya@company.com",
+      "policy_id": "pol-001"
+    },
+    {
+      "id": "req-022",
+      "name": "Vera Morozova",
+      "email": "v.morozova@example.com",
+      "request_type": "deletion",
+      "status": "approved",
+      "submitted_at": "2026-08-22T08:00:00.000Z",
+      "assigned_to": "james@company.com",
+      "policy_id": "pol-002"
+    },
+    {
+      "id": "req-026",
+      "name": "Zoe Campbell",
+      "email": "z.campbell@example.com",
+      "request_type": "access",
+      "status": "approved",
+      "submitted_at": "2026-08-17T13:00:00.000Z",
+      "assigned_to": "sarah@company.com",
+      "policy_id": "pol-001"
+    },
+    {
+      "id": "req-027",
+      "name": "Aaron Mitchell",
+      "email": "a.mitchell@example.com",
+      "request_type": "deletion",
+      "status": "denied",
+      "submitted_at": "2026-10-02T10:15:00.000Z",
+      "assigned_to": "priya@company.com",
+      "policy_id": "pol-002"
+    },
+    {
+      "id": "req-030",
+      "name": "Diana Frost",
+      "email": "d.frost@example.com",
+      "request_type": "deletion",
+      "status": "approved",
+      "submitted_at": "2026-08-30T09:00:00.000Z",
+      "assigned_to": "priya@company.com",
+      "policy_id": "pol-002"
+    },
+    {
+      "id": "req-032",
+      "name": "Fatima Al-Hassan",
+      "email": "f.alhassan@example.com",
+      "request_type": "portability",
+      "status": "denied",
+      "submitted_at": "2026-09-24T11:30:00.000Z",
+      "assigned_to": "sarah@company.com",
+      "policy_id": "pol-003"
+    },
+    {
+      "id": "req-034",
+      "name": "Hannah Clarke",
+      "email": "h.clarke@example.com",
+      "request_type": "access",
+      "status": "approved",
+      "submitted_at": "2026-09-07T13:15:00.000Z",
+      "assigned_to": "james@company.com",
+      "policy_id": "pol-001"
+    },
+    {
+      "id": "req-037",
+      "name": "Kwame Asante",
+      "email": "k.asante@example.com",
+      "request_type": "access",
+      "status": "approved",
+      "submitted_at": "2026-08-12T10:00:00.000Z",
+      "assigned_to": "james@company.com",
+      "policy_id": "pol-001"
+    },
+    {
+      "id": "req-038",
+      "name": "Laura Becker",
+      "email": "l.becker@example.com",
+      "request_type": "deletion",
+      "status": "denied",
+      "submitted_at": "2026-10-25T15:30:00.000Z",
+      "assigned_to": "sarah@company.com",
+      "policy_id": "pol-002"
+    },
+    {
+      "id": "req-040",
+      "name": "Nina Hoffman",
+      "email": "n.hoffman@example.com",
+      "request_type": "portability",
+      "status": "approved",
+      "submitted_at": "2026-10-08T11:00:00.000Z",
+      "assigned_to": "james@company.com",
+      "policy_id": "pol-003"
+    },
+    {
+      "id": "req-043",
+      "name": "Raj Krishnamurthy",
+      "email": "r.krishnamurthy@example.com",
+      "request_type": "portability",
+      "status": "denied",
+      "submitted_at": "2026-10-20T10:00:00.000Z",
+      "assigned_to": "james@company.com",
+      "policy_id": "pol-003"
+    },
+    {
+      "id": "req-044",
+      "name": "Sofia Andreou",
+      "email": "s.andreou@example.com",
+      "request_type": "deletion",
+      "status": "approved",
+      "submitted_at": "2026-08-07T08:30:00.000Z",
+      "assigned_to": "sarah@company.com",
+      "policy_id": "pol-002"
+    },
+    {
+      "id": "req-048",
+      "name": "Wendy Chang",
+      "email": "w.chang@example.com",
+      "request_type": "access",
+      "status": "approved",
+      "submitted_at": "2026-10-02T10:30:00.000Z",
+      "assigned_to": "priya@company.com",
+      "policy_id": "pol-001"
+    },
+    {
+      "id": "req-049",
+      "name": "Xander Novak",
+      "email": "x.novak@example.com",
+      "request_type": "deletion",
+      "status": "denied",
+      "submitted_at": "2026-11-02T14:00:00.000Z",
+      "assigned_to": "james@company.com",
+      "policy_id": "pol-002"
+    },
+    {
+      "name": "ghgfhfghgfhfgh",
+      "email": "fghfghhfgh@dfgg.com",
+      "request_type": "portability",
+      "status": "pending",
+      "submitted_at": "2026-11-27T14:36:17.886Z",
+      "assigned_to": null,
+      "policy_id": "pol-003",
+      "id": "ca3T5te"
+    }
+  ]
+}
